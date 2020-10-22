@@ -2,7 +2,7 @@
 
 Om een level te maken hebben we in de level klasse een 2D array aangemaakt van bytes (0-255):
   
-  ´´´
+```
   public byte[,] tileArray = new Byte[,]
         {
             {0,0,0,0,0,0 },
@@ -11,12 +11,12 @@ Om een level te maken hebben we in de level klasse een 2D array aangemaakt van b
             {0,1,0,1,0,1 },
         };
  
- ´´´
+```
  
  Deze array bevat getallen, en deze getallen representeren level elementen zoals blokjes, bomen, ... In bovenstaand voorbeeld bevat het een 0 voor niets, en een 1 voor een blokje.
  Wanneer een level wordt aangemaakt roep ik de CreateWorld methode op:
  
- ´´´
+ ```
  public void CreateWorld()
         {
             for (int x = 0; x < 4; x++)
@@ -30,13 +30,13 @@ Om een level te maken hebben we in de level klasse een 2D array aangemaakt van b
                 }
             }
         }
- ´´´
+```
  
  Deze methode itereert over de 2D array en converteert de bytearray naar een array van blokken (level elementen). (PS: werk hier met abstractie!)
  
  Daarna maken we een draw methode aan die we vanuit de game klasse aanroepen om elk frame het level te tekenen:
  
- ´´´
+```
  
    public void DrawWorld(SpriteBatch spritebatch)
         {
@@ -53,5 +53,5 @@ Om een level te maken hebben we in de level klasse een 2D array aangemaakt van b
 
         }
         
- ´´´
+```
  
